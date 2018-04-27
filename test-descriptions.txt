@@ -1,0 +1,67 @@
+Non-trivial Test Cases:
+
+test1.txt - code takes care of all the invalid inputs
+
+this Test covers one such case where row/height input is invalid
+. 5 1
+. . * . .
+. . . . .
+. . . . .
+. . . * .
+. * . . .
+excepted output:
+Test1
+Invalid Input or Number of Rows/Columns and pond height/width mismatch
+Error!
+
+this Test covers one such case where escape input is invalid
+5 5 5
+. . * . .
+. . . . .
+. . . . .
+. . . * .
+. * . . .
+excepted output:
+test1
+Invalid escape point
+Error!
+
+this Test covers one such case where row or column is negative
+-1 5 1
+. . * . .
+. . . . .
+. . . . .
+. . . * .
+. * . . .
+test1
+Invalid Input Error!
+
+
+--------------------------------------------------------------------------------
+test2.txt - This test checks the situation where a sqaure has no neighbors
+5 5 1
+* . * . .
+. * . . .
+. . . . .
+. . . . .
+. . . . .
+excepted output:
+test2
+1:[(2, 1), (3, 1)]
+2:[(2, 2), (2, 3), (2, 4)]
+Points that have no escape:
+[(1, 0), (3, 0), (4, 0), (0, 1), (0, 2), (1, 2), (3, 2), (4, 2), (0, 3), (1, 3),
+ (3, 3), (4, 3), (0, 4), (1, 4), (3, 4), (4, 4)]
+
+--------------------------------------------------------------------------------
+
+test3.txt - tests if the escape point has a rock
+5 5 1
+. . * . .
+. . . . *
+. . . . .
+. . . . .
+. * . . .
+excepted output:
+test3
+Escape point has a rock.. No sqaures are escapable
